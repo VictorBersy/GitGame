@@ -1,8 +1,17 @@
-<div class="row">
-  <h1 class="text-center">Welcome Home!</h1>
-</div>
-<div class="row">
-  <div class="small-12 columns">
-    <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
+<div class="home">
+  <div class="header">
+    <div class="row">
+      <div class="small-8 columns">
+        <h1>GitGame</h1>
+        <h1 class="subheader">Work & play at the same time.</h1>
+        <p>
+          Increase your productivity and challenge your coworkers while helping
+          open source community.
+        </p>
+      </div>
+      <div class="small-4 columns">
+        <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github), class: "button large" %>
+      </div>
+    </div>
   </div>
 </div>
