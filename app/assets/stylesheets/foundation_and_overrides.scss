@@ -1210,6 +1210,7 @@ $sub-nav-active-cursor: default;
 
 // Background color for the top bar
 // $topbar-bg-color: #333;
+$topbar-bg-color: #FFF;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1231,6 +1232,7 @@ $sub-nav-active-cursor: default;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
+$topbar-link-color: #000;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
@@ -1336,5 +1338,4 @@ $sub-nav-active-cursor: default;
 // $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
 // $range-slider-handle-cursor: pointer;
 
-@import 'foundation';
 // @import 'foundation';
