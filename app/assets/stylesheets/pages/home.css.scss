@@ -1,5 +1,10 @@
 .home {
   .header {
     padding: 80px;
+    background: #5A4497;
+    h1, h2, h3, h4, h5, h6, p { color: white; }
+    h1 { font-size: 4em; }
+    p { font-size: 20px; }
+    .button { background: #171515; }
   }
 }
