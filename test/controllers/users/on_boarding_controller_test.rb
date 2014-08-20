@@ -1,18 +1,18 @@
 require 'test_helper'
 
 class Users::OnBoardingControllerTest < ActionController::TestCase
-  test "should get generateToken" do
-    get :generateToken
+  test "should get generate_token" do
+    get :generate_token
     assert_response :success
   end
 
-  test "should get selectRepos" do
-    get :selectRepos
+  test "should get select_repos" do
+    get :select_repos
     assert_response :success
   end
 
-  test "should get startPlaying" do
-    get :startPlaying
+  test "should get start_playing" do
+    get :start_playing
     assert_response :success
   end
 

@@ -1,10 +1,11 @@
 class Users::OnBoardingController < ApplicationController
-  def generateToken
+  def generate_token
+    @token = current_user.generate_token
   end
 
-  def selectRepos
+  def select_repos
   end
 
-  def startPlaying
+  def start_playing
   end
 end
