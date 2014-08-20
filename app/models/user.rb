@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.name     = auth.info.nickname
       user.image    = auth.info.image
-      user.token    = self.generate_token
     end
   end
 
