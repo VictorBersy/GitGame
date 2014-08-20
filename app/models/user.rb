@@ -14,12 +14,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  private
-
-  def self.generate_token
+  def generate_token
+    puts self.to_yaml
     begin
       token = SecureRandom.hex
-    end while self.exists?(token: token)
-    token
+    end while User.exists?(token: token)
+    self.update(token: token)
   end
 end

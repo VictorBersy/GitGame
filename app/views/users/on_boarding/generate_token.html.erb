@@ -1,2 +1,11 @@
-<h1>Users::OnBoarding#generate_token</h1>
-<p>Find me in app/views/users/on_boarding/generate_token.html.erb</p>
+<div class="row">
+  <div class="small-12 columns">
+    <h2 class="text-center">There is your unique token.</h2>
+    <p class="text-center"><%= @token %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-8 small-push-2 columns">
+    <%= link_to 'Continue', '#', class: 'expand large success button' %>
+  </div>
+</div>
