@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   root 'high_voltage/pages#show', id: 'home'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  namespace :users do
+    get 'generate_token'  => 'on_boarding#generateToken'
+    get 'select_repos'    => 'on_boarding#selectRepos'
+    get 'start_playing'   => 'on_boarding#startPlaying'
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
