@@ -15,11 +15,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  def generate_token
-    puts self.to_yaml
+  def generate_gitgame_token
     begin
-      token = SecureRandom.hex
-    end while User.exists?(token: token)
-    self.update(token: token)
+      gitgame_token = SecureRandom.hex
+    end while User.exists?(gitgame_token: gitgame_token)
+    self.update(gitgame_token: gitgame_token)
   end
 end
