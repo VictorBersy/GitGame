@@ -1,0 +1,6 @@
+button, .button {
+  &.github {
+    @include button-style($bg:$brand-github, $radius:null, $disabled:null, $bg-hover:null, $border-color:null)
+  }
+}
+
