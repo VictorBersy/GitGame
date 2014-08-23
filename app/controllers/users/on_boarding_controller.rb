@@ -5,6 +5,7 @@ class Users::OnBoardingController < ApplicationController
   end
 
   def select_repos
+    @repositories = Octokit.repositories
   end
 
   def start_playing

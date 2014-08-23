@@ -1,2 +1,7 @@
 <h1>Users::OnBoarding#select_repos</h1>
 <p>Find me in app/views/users/on_boarding/select_repos.html.erb</p>
+<% @repositories.each do |repository| %>
+  <div class="row">
+    <%= repository.name %>
+  </div>
+<% end %>
