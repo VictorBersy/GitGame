@@ -15,6 +15,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def configure_octokit
+    Octokit.configure do |config|
+      config.access_token = self.github_token
+    end
+  end
+
   def generate_gitgame_token
     begin
       gitgame_token = SecureRandom.hex
