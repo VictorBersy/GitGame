@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   namespace :users do
-    get 'generate_token'  => 'on_boarding#generate_gitgame_token'
-    get 'select_repos'    => 'on_boarding#select_repos'
-    get 'start_playing'   => 'on_boarding#start_playing'
+    get  'generate_token'  => 'on_boarding#generate_gitgame_token'
+    get  'select_repos'    => 'on_boarding#select_repos'
+    post 'start_playing'   => 'on_boarding#start_playing'
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
