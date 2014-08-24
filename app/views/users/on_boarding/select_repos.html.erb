@@ -1,4 +1,4 @@
-<%= form_tag(controller: "on_boarding", action: "start_playing") %>
+<%= form_tag(controller: "on_boarding", action: "start_playing") do %>
   <% @repositories.each do |repository| %>
   <div class="row">
     <div class="small-1 columns">
@@ -20,3 +20,4 @@
       <%= button_to 'Continue', users_start_playing_path, class: 'expand large success button' %>
     </div>
   </div>
+<% end %>
