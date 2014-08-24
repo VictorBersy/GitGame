@@ -1,7 +1,22 @@
-<h1>Users::OnBoarding#select_repos</h1>
-<p>Find me in app/views/users/on_boarding/select_repos.html.erb</p>
-<% @repositories.each do |repository| %>
+<%= form_tag(controller: "on_boarding", action: "start_playing") %>
+  <% @repositories.each do |repository| %>
   <div class="row">
-    <%= repository.name %>
+    <div class="small-1 columns">
+      <div class="switch">
+        <%= check_box_tag(repository.id, 1, checked: true) %>
+        <%= label_tag(repository.id) %>
+      </div>
+    </div>
+    <div class="small-2 columns">
+      <%= link_to(repository.name, repository.html_url, class:"expand tiny button github") %>
+    </div>
+    <div class="small-9 columns">
+      <%= repository.description %>
+    </div>
   </div>
-<% end %>
+  <% end %>
+  <div class="row">
+    <div class="small-8 small-push-2 columns">
+      <%= button_to 'Continue', users_start_playing_path, class: 'expand large success button' %>
+    </div>
+  </div>
