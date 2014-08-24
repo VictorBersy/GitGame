@@ -3,8 +3,8 @@
   <div class="row">
     <div class="small-1 columns">
       <div class="switch">
-        <%= check_box_tag(repository.id, 1, checked: true) %>
-        <%= label_tag(repository.id) %>
+        <%= check_box_tag("repositories[#{repository.name}]", 'selected', checked: true) %>
+        <%= label_tag("repositories[#{repository.name}]") %>
       </div>
     </div>
     <div class="small-2 columns">
