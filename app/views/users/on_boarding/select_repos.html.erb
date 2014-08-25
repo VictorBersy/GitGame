@@ -10,14 +10,14 @@
     <div class="small-3 columns">
       <%= link_to(repository.full_name, repository.html_url, class:"expand tiny button github") %>
     </div>
-    <div class="small-9 columns">
+    <div class="small-8 columns">
       <%= repository.description %>
     </div>
   </div>
   <% end %>
   <div class="row">
     <div class="small-8 small-push-2 columns">
-      <%= button_to 'Continue', users_start_playing_path, class: 'expand large success button' %>
+      <%= button_to 'Create a webhook for each of these repositories.', users_start_playing_path, class: 'expand large success button' %>
     </div>
   </div>
 <% end %>
