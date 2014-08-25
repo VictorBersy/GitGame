@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     get  'select_repos'    => 'on_boarding#select_repos'
     post 'start_playing'   => 'on_boarding#start_playing'
   end
+
+  namespace 'webhook' do
+    post 'github/receive'
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
