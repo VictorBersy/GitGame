@@ -19,11 +19,10 @@ class Users::OnBoardingController < ApplicationController
 
   def create_webhook(repository_name)
     puts repository_name
-    puts "#{GITGAME_CONFIG['webhook_url']}/webhook/github/"
-=begin
+    webhook_url = "#{root_url}/webhook/github/"
     Octokit.create_hook(repository_name, 'web',
       {
-        :url => "#{root_url}/webhook/github/",
+        :url => webhook_url,
         :content_type => 'json'
       },
       {
@@ -31,6 +30,5 @@ class Users::OnBoardingController < ApplicationController
         :active => true
       }
     )
-=end
   end
 end
