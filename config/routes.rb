@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   namespace :webhooks do
     post 'github/receive'
   end
+
+  scope ':name' do
+    get '/' => 'users/profile#show'
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
