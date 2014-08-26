@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     post 'start_playing'   => 'on_boarding#start_playing'
   end
 
-  namespace 'webhook' do
+  namespace :webhooks do
     post 'github/receive'
   end
   # Example of regular route:
