@@ -6,6 +6,6 @@ class Users::ProfileController < ApplicationController
   private
 
   def retrieve_user
-    @user = User.find_by_username(params[:name].parameterize)
+    @user = User.find_by_username(params[:username].parameterize)
   end
 end

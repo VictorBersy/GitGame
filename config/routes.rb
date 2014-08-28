@@ -16,8 +16,8 @@ Rails.application.routes.draw do
     post 'github/receive'
   end
 
-  scope ':name' do
-    get '/' => 'users/profile#show'
+  scope ':username' do
+    get '/' => 'users/profile#show', as: :profile
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
