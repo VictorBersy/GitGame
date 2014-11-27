@@ -18,7 +18,6 @@ class Users::OnBoardingController < ApplicationController
   private
 
   def create_webhook(repository_name)
-    puts repository_name
     webhook_url = "#{root_url}/webhook/github/"
     Octokit.create_hook(repository_name, 'web',
       {
