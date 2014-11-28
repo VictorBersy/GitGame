@@ -21,11 +21,4 @@ class User < ActiveRecord::Base
       config.access_token = self.github_token
     end
   end
-
-  def generate_gitgame_token
-    begin
-      gitgame_token = SecureRandom.hex
-    end while User.exists?(gitgame_token: gitgame_token)
-    self.update(gitgame_token: gitgame_token)
-  end
 end
